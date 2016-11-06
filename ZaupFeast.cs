@@ -63,9 +63,11 @@ namespace ZaupFeast
                 Rocket.Core.Logging.Logger.Log("Failed to load the configuration file.  Turned off feast.  Restart to try again.");
                 return;
             }
-
-           // if (LevelNodes.nodes == null)
-            //    LevelNodes.load();
+            Provider.onServerHosted += () =>
+             {
+                 if (LevelNodes.nodes == null)
+                     LevelNodes.load();
+             };
         }
 
         protected override void Unload()
