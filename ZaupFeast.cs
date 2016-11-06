@@ -64,8 +64,8 @@ namespace ZaupFeast
                 return;
             }
 
-            if (LevelNodes.nodes == null)
-                LevelNodes.load();
+           // if (LevelNodes.nodes == null)
+            //    LevelNodes.load();
         }
 
         protected override void Unload()
