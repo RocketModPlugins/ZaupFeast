@@ -290,6 +290,14 @@ namespace ZaupFeast
         private bool nodesInitialised = false;
         private DateTime startTime = DateTime.Now;
 
+        public void OnLevelWasLoaded()
+        {
+            if (LevelNodes.nodes == null)
+                LevelNodes.load();
+
+            initializeNodes();
+        }
+
         public void FixedUpdate()
         {
             try
@@ -300,11 +308,6 @@ namespace ZaupFeast
                     {
                         if (Feast.Instance.Configuration.Instance.Enabled && Feast.Instance.running)
                             Feast.Instance.checkFeast();
-                    }
-                    else
-                    {
-                        if ((DateTime.Now - startTime).TotalSeconds > 5)
-                            initializeNodes();
                     }
                 }
             }
