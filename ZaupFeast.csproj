@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ZaupFeast</RootNamespace>
     <AssemblyName>ZaupFeast</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -66,6 +66,14 @@
       <HintPath>lib\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>lib\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>lib\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandRunFeast.cs" />
@@ -79,7 +87,9 @@
     <Content Include="lib\Rocket.API.dll" />
     <Content Include="lib\Rocket.Core.dll" />
     <Content Include="lib\Rocket.Unturned.dll" />
+    <Content Include="lib\UnityEngine.CoreModule.dll" />
     <Content Include="lib\UnityEngine.dll" />
+    <Content Include="lib\UnityEngine.PhysicsModule.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
